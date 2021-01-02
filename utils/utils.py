@@ -77,8 +77,8 @@ def centerIndex(boxes, xcenter, ycenter):
         left, top, width, height = boxes[i]
         right = left + width
         bottom = top + height
-        if left < xcenter && right > xcenter:
-            if top < ycenter && bottom > ycenter:
+        if left < xcenter and right > xcenter:
+            if top < ycenter and bottom > ycenter:
                 return i
             else:
                 continue
