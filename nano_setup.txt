@@ -59,6 +59,7 @@ sudo apt install -y lxdm
 #$sudo apt install -y --reinstall lxdm
 
 #set audio device to the usb card:
+#pactl list short sinks
 #pactl set-default-sink 'alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo'
 #pactl -- set-sink-volume 0 90%
 ############################################################################################################################################################################################
