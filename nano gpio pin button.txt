@@ -1,0 +1,39 @@
+initial gpio steps at:
+https://github.com/NVIDIA/jetson-gpio
+
+0 = 0v
+1 = 3.3v
+
+no pull up or down resistors
+
+need pull up resistor
+
+pin 15 in
+
+switch
+
+ground
+
+1k resistor
+
+pin 1 voltage
+
+(see gpio schematic)
+
+in python simple use
+
+#import packages
+import Jetson.GPIO as GPIO
+#sets pins to use native numbers
+GPIO.setmode(GPIO.BOARD)
+inpin = 15
+GPIO.setup(inpin,GPIO.IN)
+x = GPIO.input(15)
+#x=1 if button not pushed, x=0 if pushed
+#releases gpio pin setup
+GPIO.cleanup()
+
+while True;
+	x = GPIO.input(inpin)
+	if x == 0:
+		do the image object detection crap.
