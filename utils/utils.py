@@ -315,8 +315,7 @@ def orderResults(text):
 #read text results
 ####################################################  
 def readResults(objname, text):
-    !pactl set-default-sink 'alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo'
-    !pactl -- set-sink-volume 0 90%
+
     engine = pyttsx3.init()
     #set voice rate to slower than normal
     newVoiceRate = 95
