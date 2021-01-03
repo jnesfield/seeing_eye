@@ -35,7 +35,7 @@ At this point you should be ready to go.
 ### GPIO SETUP ###
 The GPIO set up follows the below schematic:
 
-[<img src="https://github.com/jnesfield/seeing_eye/blob/main/gpio%20pin%20schematic.PNG">]
+<img src="https://github.com/jnesfield/seeing_eye/blob/main/gpio%20pin%20schematic.PNG">
 
 **In lay terms:** we are using pins 1, 9, and 15.<br> 
 - Pin 1: 3.3 Volt
@@ -44,11 +44,7 @@ The GPIO set up follows the below schematic:
 <br>
 By recreating this schematic with a bread board and some header wires we end up with the following:<br>
 
-[<img src="https://github.com/jnesfield/seeing_eye/blob/main/GPIO%20bread%20board.png">]
+<img src="https://github.com/jnesfield/seeing_eye/blob/main/GPIO%20bread%20board.png">
 
 Now we have a GPIO based button that will work witht eh application, provided the Jetson GPIO github instructions were followed correctly.
 
-
-```python
-
-```
