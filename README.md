@@ -11,18 +11,18 @@
 The shopping list for this project is below with links to the actual items I purchased. The shopping list is broken down into two sections **CORE** and **OPTIONAL**. Most of the optional items are things I got that help the workflow but are not really necessary.<br>
 
 #### CORE ####
-**Jetson Nano 2GB Dev Kit:**https://www.amazon.com/NVIDIA-Jetson-Nano-Developer-945-13541-0000-000/dp/B08J157LHH/ref=sr_1_3?dchild=1&keywords=jetson+nano+2gb&qid=1609698418&sr=8-3<br>
-**SD Card:**https://www.amazon.com/gp/product/B07G3H5RBT/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1<br>
-**Electronic Parts Kit:**https://www.amazon.com/gp/product/B01IH4VJRI/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&psc=1<br>
-**USB Audio Device:**https://www.amazon.com/gp/product/B00XM883BK/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1<br>
-**Jumper Shunts:**https://www.amazon.com/gp/product/B077957RN7/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1<br>
-**Atx Power Buttons:**https://www.amazon.com/gp/product/B07JYX97Y6/ref=ppx_yo_dt_b_asin_title_o07_s02?ie=UTF8&psc=1<br>
-**USB C Power Supply:**https://www.amazon.com/gp/product/B07TYQRXTK/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1<br>
-**1MP USb Camera:**https://www.amazon.com/gp/product/B00UMX3HEG/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1<br>
+**Jetson Nano 2GB Dev Kit:** https://www.amazon.com/NVIDIA-Jetson-Nano-Developer-945-13541-0000-000/dp/B08J157LHH/ref=sr_1_3?dchild=1&keywords=jetson+nano+2gb&qid=1609698418&sr=8-3<br>
+**SD Card:** https://www.amazon.com/gp/product/B07G3H5RBT/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1<br>
+**Electronic Parts Kit:** https://www.amazon.com/gp/product/B01IH4VJRI/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&psc=1<br>
+**USB Audio Device:** https://www.amazon.com/gp/product/B00XM883BK/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1<br>
+**Jumper Shunts:** https://www.amazon.com/gp/product/B077957RN7/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1<br>
+**Atx Power Buttons:** https://www.amazon.com/gp/product/B07JYX97Y6/ref=ppx_yo_dt_b_asin_title_o07_s02?ie=UTF8&psc=1<br>
+**USB C Power Supply:** https://www.amazon.com/gp/product/B07TYQRXTK/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1<br>
+**1MP USb Camera:** https://www.amazon.com/gp/product/B00UMX3HEG/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1<br>
 
 #### OPTIONAL ####
-**Nano Case:**https://www.amazon.com/gp/product/B07TS83WGW/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1<br>
-**Battery Pack:**https://www.amazon.com/gp/product/B07P5ZP943/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1<br>
+**Nano Case:** https://www.amazon.com/gp/product/B07TS83WGW/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1<br>
+**Battery Pack:** https://www.amazon.com/gp/product/B07P5ZP943/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1<br>
 
 Various other cabels and widgets are also involved. If I miss something big please comment so I can fix it!
 
