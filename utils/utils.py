@@ -305,9 +305,9 @@ def textDetection(image, roi):
 def column(matrix, i):
     return [row[i] for row in matrix]
     
-def fixResults(text):
+def fixResults(results):
     data = []
-    for i in range(len(text)):
+    for i in range(len(results)):
         startX, startY, endX, endY = column(results,0)[i]         
         text = column(results,1)[i]
         data.append([text, startX, startY, endX, endY])
