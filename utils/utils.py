@@ -142,7 +142,7 @@ def objDetect(image):
     centeridx = centerIndex(boxes, xcenter, ycenter)
     
     #check if centerObjName is Nonetype, if so, no object detected (force obj to say "no obj detected", and define roi as whole image
-    if classIds[centeridx] is None:
+    if centeridx is None:
         centerObjName = "no object detected "
         roi = [0, 0, W, H]
         return roi, centerObjName
