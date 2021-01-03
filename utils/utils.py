@@ -17,7 +17,7 @@ from pandas import DataFrame
 #image capture
 ####################################################
 def imageCap():
-    capture = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0)
     ret, img = cap.read()
     cap.release()
     
