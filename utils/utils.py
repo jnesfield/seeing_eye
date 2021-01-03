@@ -93,14 +93,14 @@ def objDetect(image):
     inpHeight = 416      #Height of network's input image
     
     # Load names of classes
-    classesFile = r"~/seeing_eye/coco_names/coco.names"
+    classesFile = r"./seeing_eye/coco_names/coco.names"
     classes = None
     with open(classesFile, 'rt') as f:
         classes = f.read().rstrip('\n').split('\n')
         
     # Give the configuration and weight files for the model and load the network using them.
-    modelConfiguration = r"~/seeing_eye/frozen_models/coco/yolov3.cfg"
-    modelWeights = r"~/seeing_eye/frozen_models/coco/yolov3.weights"
+    modelConfiguration = r"./seeing_eye/frozen_models/coco/yolov3.cfg"
+    modelWeights = r"./seeing_eye/frozen_models/coco/yolov3.weights"
 
     #load model
     net = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeights)
@@ -172,7 +172,7 @@ def textDetection(image, roi):
         "feature_fusion/concat_3"]
     
     # load the pre-trained EAST text detector
-    net = cv2.dnn.readNet(r"~/seeing_eye/frozen_models/east/frozen_east_text_detection.pb")
+    net = cv2.dnn.readNet(r"./seeing_eye/frozen_models/east/frozen_east_text_detection.pb")
     
     #image preprocessing
     #crop roi from image
