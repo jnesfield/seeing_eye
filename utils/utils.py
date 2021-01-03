@@ -188,6 +188,11 @@ def textDetection(image, roi):
     x  = int(roi[0])
     x2 = int(roi[0]+roi[2]+1)
     
+    if y == 0:
+        y = 1
+    if x == 0:
+        x = 1
+    
     image = image[y:y2, x:x2]
     orig = image.copy()
     (H, W) = image.shape[:2]
