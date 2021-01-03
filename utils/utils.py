@@ -17,8 +17,8 @@ from pandas import DataFrame
 #image capture
 ####################################################
 def imageCap():
-    capture = cv.CaptureFromCAM(0)
-    img = cv.QueryFrame(capture)
+    capture = cv2.CaptureFromCAM(0)
+    img = cv2.QueryFrame(capture)
     cap.release()
     
     return img
