@@ -18,7 +18,7 @@ import math
 #image capture
 ####################################################
 def imageCap():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("/dev/video0")
     ret, img = cap.read()
     cap.release()
     
