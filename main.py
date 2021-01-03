@@ -22,15 +22,20 @@ while True:
        
         #capture image
         image = utils.imageCap()
+        print("img captured")
         
         #object detection
-        roi, objname = utils.objDetect(image)     
+        roi, objname = utils.objDetect(image)  
+        print("img captured")        
         
         #text detection [returns ((startX, startY, endX, endY), text) ]
         text = utils.textDetection(image, roi)
+        print("text detected")
         
         #order text
         textstring = utils.orderResults(text)
+        print("text reordered")
         
         #read results
         utils.readResults(objname, textstring)
+        print("process complete")
