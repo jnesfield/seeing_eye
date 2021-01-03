@@ -26,7 +26,7 @@ while True:
         
         #object detection
         roi, objname = utils.objDetect(image)  
-        print("img captured")        
+        print("obj detected")        
         
         #text detection [returns ((startX, startY, endX, endY), text) ]
         text = utils.textDetection(image, roi)
@@ -35,6 +35,7 @@ while True:
         #order text
         textstring = utils.orderResults(text)
         print("text reordered")
+        print(text)
         
         #read results
         utils.readResults(objname, textstring)
