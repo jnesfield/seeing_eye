@@ -24,13 +24,13 @@ while True:
         image = utils.imageCap()
         
         #object detection
-        roi, objname = objDetect(image)     
+        roi, objname = utils.objDetect(image)     
         
         #text detection [returns ((startX, startY, endX, endY), text) ]
-        text = textDetection(image, roi)
+        text = utils.textDetection(image, roi)
         
         #order text
-        textstring = orderResults(text)
+        textstring = utils.orderResults(text)
         
         #read results
-        readResults(objname, textstring)
+        utils.readResults(objname, textstring)
