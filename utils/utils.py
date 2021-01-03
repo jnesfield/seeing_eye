@@ -140,6 +140,12 @@ def objDetect(image):
     #determine which indices from boxes is center of image
     centeridx = centerIndex(boxes, xcenter, ycenter)
     
+    #check if centerObjName is Nonetype, if so, no object detected (force obj to say "no obj detected", and define roi as whole image
+    if classes[classIds[centeridx]] == None:
+        centerObjName = "no object detected "
+        roi = [0, 0, W, H]
+        return roi, centerObjName
+    
     #capture class name for object in center and coordinates
     centerObjName = classes[classIds[centeridx]]
     roi = boxes[centeridx]
@@ -305,7 +311,7 @@ def orderResults(text):
     
     textOut = ""
     for i in range(len(fixedResults)):
-        textOut += fixedResults['text'][i]
+        textOut += (fixedResults['text'][i] + " ")
         
     return textOut
        
