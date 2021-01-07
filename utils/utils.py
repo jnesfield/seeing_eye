@@ -94,7 +94,7 @@ def objDetect(image):
     inpHeight = 416      #Height of network's input image
     
     # Load names of classes
-    classesFile = r"./coco_names/coco.names"
+    classesFile = r"~/seeing_eye/coco_names/coco.names"
     classes = None
     with open(classesFile, 'rt') as f:
         classes = f.read().rstrip('\n').split('\n')
