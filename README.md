@@ -61,6 +61,6 @@ Next we set up a light that tells us when the application is ready folling this 
 By recreating this schematic with a bread board and some header wires we end up with the following:<br>
 *PLEASE NOTE: The button on the prior set up has been replaced by a atx case button with longer wires*
 
-
+<img src="
 
 **MORE TO COME**
