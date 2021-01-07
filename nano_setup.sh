@@ -33,7 +33,7 @@ git lfs pull
 #write out current crontab
 crontab -l > mycron
 #echo new cron into cron file
-echo @reboot ~/seeing_eye/startup.sh >> mycron
+echo "@reboot sleep 60 && ~/seeing_eye/startup.sh" >> mycron
 #install new cron file
 crontab mycron
 rm mycron
