@@ -33,6 +33,11 @@ After setting up the linux packages please follow the GPIO setup instructions at
 At this point you should be ready to go.
 
 ### GPIO SETUP ###
+**TAKEN FROM:**
+- https://www.youtube.com/watch?time_continue=861&v=6FNX9XTRWCA&feature=emb_logo
+- https://www.youtube.com/watch?v=ehzrPl5cNCc
+- https://www.youtube.com/watch?v=6FNX9XTRWCA&feature=emb_logo
+
 The GPIO set up follows the below schematic:
 
 <img src="https://github.com/jnesfield/seeing_eye/blob/main/gpio%20pin%20schematic.PNG">
