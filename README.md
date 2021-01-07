@@ -52,6 +52,15 @@ Next we set up a light that tells us when the application is ready folling this 
 
 <img src="https://github.com/jnesfield/seeing_eye/blob/main/light.png">
 
+**In lay terms:** we are using pins 2, 9, and 23.<br> 
+- Pin 2: 5 Volt
+- Pin 9: Ground
+- Pin 15: SPI_1_SCK
+<br>
+
+By recreating this schematic with a bread board and some header wires we end up with the following:<br>
+*PLEASE NOTE: The button on the prior set up has been replaced by a atx case button with longer wires*
+
 
 
 **MORE TO COME**
