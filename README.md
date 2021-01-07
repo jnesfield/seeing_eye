@@ -46,6 +46,12 @@ By recreating this schematic with a bread board and some header wires we end up 
 
 <img src="https://github.com/jnesfield/seeing_eye/blob/main/GPIO%20bread%20board.png">
 
-Now we have a GPIO based button that will work witht eh application, provided the Jetson GPIO github instructions were followed correctly.
+Now we have a GPIO based button that will work with the application, provided the Jetson GPIO github instructions were followed correctly.
+
+Next we set up a light that tells us when the application is ready folling this schematic:
+
+<img src="https://github.com/jnesfield/seeing_eye/blob/main/light.png">
+
+
 
 **MORE TO COME**
