@@ -67,4 +67,7 @@ By recreating this schematic with a bread board and some header wires we end up 
 
 <img src="https://github.com/jnesfield/seeing_eye/blob/main/BUTTONnLIGHT.png">
 
+**NOW WE HAVE A LIGHT TELLING US WHENB THE SYSTEM IS READY AS WELL AS A BUTTON TO SIGNLA WHEN TO CAPTURE AN IMAGE TO PROCESS!!!!**
+
+
 **MORE TO COME**
