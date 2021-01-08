@@ -3,6 +3,10 @@ import Jetson.GPIO as GPIO
 import cv2
 from utils import utils
 import signal
+import os
+
+os.system(r"env DISPLAY=:0.0 su -c pactl set-default-sink 'alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo'")
+os.system(r"env DISPLAY=:0.0 su -c pactl -- set-sink-volume 0 90%")
 
 #sets pins to use native numbers
 GPIO.setmode(GPIO.BOARD)
