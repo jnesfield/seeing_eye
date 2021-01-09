@@ -21,8 +21,6 @@ yes | pip3 install pyttsx3
 
 apt-get install -y espeak
 
-git lfs pull 
-
 #create startup script
 #write out current crontab
 crontab -l > mycron
@@ -33,4 +31,12 @@ crontab mycron
 rm mycron
 
 chmod 777 ~/seeing_eye/startup.sh
+
+apt-get install xserver-xorg-video-dummy
+
+cp /etc/X11/xorg.conf /etc/X11/xorg.conf.old
+
+rm /etc/X11/xorg.conf
+
+cp ~/seeing_eye/xorg.conf /etc/X11/xorg.conf
 
