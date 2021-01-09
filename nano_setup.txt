@@ -1,4 +1,6 @@
 #initial setup - choose autologin on first set up with nano (after imaging sd card) otherwise it will cause problems later with lxdm:
+#this also enables use of jupyter notebook and tensorflow both of which are not required for the core product to work but are nice to hae to build off
+
 
 sudo apt-get purge -y libreoffice* 
 
@@ -8,29 +10,29 @@ sudo apt-get install -y python3-pip
 
 sudo apt-get install -y tesseract-ocr 
 
-yes | pip3 install  flask 
-
-yes | pip3 install  --upgrade pip 
-
-yes | pip3 install  --upgrade Pillow 
-
-yes | pip3 install pytesseract  
-
-yes | pip3 install pyttsx3 
-
 sudo apt-get install -y libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran 
 
-yes | pip3 install -U pip testresources setuptools==49.6.0 
+sudo yes | pip3 install  flask 
 
-yes | pip3 install -U numpy==1.16.1 future==0.18.2 mock==3.0.5 h5py==2.10.0 keras_preprocessing==1.1.1 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11 
+sudo yes | pip3 install  --upgrade pip 
 
-yes | pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==2.3.1+nv20.11 
+sudo pip3 install  --upgrade Pillow 
 
-yes | pip3 install --upgrade tensorflow-hub 
+sudo pip3 install pytesseract  
+
+sudo pip3 install pyttsx3 
+
+sudo yes | pip3 install -U pip testresources setuptools==49.6.0 
+
+sudo yes | pip3 install -U numpy==1.16.1 future==0.18.2 mock==3.0.5 h5py==2.10.0 keras_preprocessing==1.1.1 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11 
+
+sudo yes | pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==2.3.1+nv20.11 
+
+sudo yes | pip3 install --upgrade tensorflow-hub 
 
 sudo apt install -y nodejs npm 
 
-yes | pip3 install jupyter jupyterlab 
+sudo yes | pip3 install jupyter jupyterlab 
 
 sudo apt-get install -y espeak
 
@@ -44,11 +46,11 @@ jupyter lab --generate-config
 #$ifconfig
 #$jupyter notebook --ip=*
 ############################################################################################################################################################################################
-#save ram by removing unity gui
-sudo apt remove -y --purge ubuntu-desktop 
+#save ram by removing unity gui (not necessary but can help with issues down the road with ram)
+#$sudo apt remove -y --purge ubuntu-desktop 
 
 #Install lxdm display manager. It may prompt a dialog to choose a display manager. Choose lxdm
-sudo apt install -y lxdm 
+#$sudo apt install -y lxdm 
 
 #you will get a prompt here
 #manually run remainder of commands:
@@ -58,15 +60,15 @@ sudo apt install -y lxdm
 #$sudo apt install -y lubuntu-desktop
 #$sudo apt install -y --reinstall lxdm
 
-#set audio device to the usb card:
+#set audio device to the usb card: (included in python script)
 #$pactl list short sinks
 #$pactl set-default-sink 'alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo'
 #$pactl -- set-sink-volume 0 90%
 
-#git lfs to handle the large downloads
+#git lfs to handle the large downloads (out of bandwidth so ya)
 #$sudo apt-get install git-lfs
 
-#pull model files via git lfs
+#pull model files via git lfs (out of bandwidth so ya)
 #$cd seeing_eye
 #$sudo git lfs pull 
 ############################################################################################################################################################################################

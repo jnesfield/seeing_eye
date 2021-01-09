@@ -5,8 +5,9 @@ from utils import utils
 import signal
 import os
 
-os.system(r"env DISPLAY=:0.0 su -c pactl set-default-sink 'alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo'")
-os.system(r"env DISPLAY=:0.0 su -c pactl -- set-sink-volume 0 90%")
+#os.system(r"pulseaudio --start")
+os.system(r"pactl set-default-sink 'alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo'")
+os.system(r"pactl set-sink-volume 0 90")
 
 #sets pins to use native numbers
 GPIO.setmode(GPIO.BOARD)
@@ -19,22 +20,21 @@ def keyboardInterruptHandler(signal, frame):
     print("KeyboardInterrupt (ID: {}) has been caught. Cleaning up...".format(signal))
     GPIO.output(outpin,0)
     exit(0)
-    
+
 signal.signal(signal.SIGINT, keyboardInterruptHandler)
-    
+
 #start Infinite loop to look for gpio header button to capture image, obj detect, east(text detect) and ocr(tesseract):
 while True:
     x = GPIO.input(inpin)
-    #lights up when ready
+    #light up led when ready
     GPIO.output(outpin,1)
-
-        
     k = cv2.waitKey(1) & 0xFF
     # press 'q' to exit (if running diagnostics)
     if k == ord('q'):
         GPIO.output(outpin,0)
         break
     if x == 0:
+        #turn off led when working
         GPIO.output(outpin,0)
        
         #capture image
