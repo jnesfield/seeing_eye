@@ -33,6 +33,12 @@ After setting up the linux packages please follow the GPIO setup instructions at
 At this point you should be ready to go.
 
 ### GPIO SETUP ###
+This was done as inspired by:
+https://youtu.be/ehzrPl5cNCc
+and
+https://youtu.be/6FNX9XTRWCA
+
+
 The GPIO set up follows the below schematic:
 
 <img src="https://github.com/jnesfield/seeing_eye/blob/main/gpio%20pin%20schematic.PNG">
@@ -47,5 +53,29 @@ By recreating this schematic with a bread board and some header wires we end up 
 <img src="https://github.com/jnesfield/seeing_eye/blob/main/GPIO%20bread%20board.png">
 
 Now we have a GPIO based button that will work witht eh application, provided the Jetson GPIO github instructions were followed correctly.
+
+Next we set up a led light to let us know when the device is ready.
+
+The GPIO set up follows the below schematic:
+
+<img src="https://github.com/jnesfield/seeing_eye/blob/main/light.png">
+
+**In lay terms:** we are using pins 2, 9, and 23.<br> 
+- Pin 2: 5 Volt
+- Pin 9: Ground
+- Pin 23: SPI_1_SCK
+<br>
+By recreating this schematic with a bread board and some header wires we end up with the following:<br>
+
+<img src="https://github.com/jnesfield/seeing_eye/blob/main/BUTTONnLIGHT.png">
+
+Now we have a button to tell the device when to capture as well as a light that goes on when the device is ready and turns off when capturing!!
+
+Next we have to set up a button to turn off the device. This will be recognized in the python code and trigger a shutdown.
+
+
+
+
+
 
 **MORE TO COME**
