@@ -71,11 +71,12 @@ By recreating this schematic with a bread board and some header wires we end up 
 
 Now we have a button to tell the device when to capture as well as a light that goes on when the device is ready and turns off when capturing!!
 
-Next we have to set up a button to turn off the device. This will be recognized in the python code and trigger a shutdown.
+This will NOT be helpful for sight impared individuals but will be helpful for our testing purposes.
+
+### TESTING ###
 
 
-
-
+### HOW THE CODE WORKS ###
 
 
 **MORE TO COME**
