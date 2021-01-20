@@ -73,10 +73,25 @@ Now we have a button to tell the device when to capture as well as a light that 
 
 This will NOT be helpful for sight impared individuals but will be helpful for our testing purposes.
 
-### TESTING ###
-
+For those who are sight impaired I modified the code so as to emit an audible tone using the speaker test function in linux. This was implemented in the working field test prototype I made for my mother that I recently gave her.
 
 ### HOW THE CODE WORKS ###
+I cheated here a bit on the machine learning aspect of this as I am a big proponent of transfer learning and using pretrained models as most models are trainined on large clusters of compute resources on millions of samples which is typically unreaslistic to acheive without significant time and resources.<br>
+*However:* This is not really cheating; in an enterprise or production environment the time to value problem is real as most organizations are not willing to spend limited resources on purely experimental research without aim or a defined exit point in which a product is available to the customers, be it internal or external. There is also a high risk of failure which must be recognized. This is why cloud providers are so successful in creating software as a service in the form of cognitive or AI tools like ocr, text to speech, or the likes as they can be used quickly by the consumer by making a simplified api call.<br>
+The design mentality I took here takes such an approach.<br>
+<br>
+The basis for the code is two different opencv tutorials by **Adrian RoseBrock** of pyimagesearch.<br>
+- Yolov3 Object Detection with OpenCV: https://www.pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/
+- OpenCV Text Detection: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
+<br>
+
+### TESTING ###
+
+Testing is quite simple once the gpio pin are set up as above and the code is downloaded and ran.<br>
+If the object is in the yolov3 data used to train the model used here it will be detected.<br>
+Next if there is text in the object
+
+
 
 
 **MORE TO COME**
