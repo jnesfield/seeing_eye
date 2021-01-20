@@ -86,8 +86,9 @@ The basis for the code is two different opencv tutorials by **Adrian RoseBrock**
 <br>
 There was also significant coding assistance found via Google which mostly resulted in Stack Overflow threads and posts having the most useful answers on technical issues that occured with the code.
 <br>
-With that acknowledgement let's walk through how this works from the aspect of the entry code containing the calls to the utils/util.py package containing the lower level code.<br>
-
+With that acknowledgement let's walk through how this works from the aspect of the entry code containing the calls to the utils/utils.py script containing the lower level code.<br>
+**Note:** the lower level code is covered her in a high level detail but for a more indepth understanding I invite you to reviewthe pyimagesearch links above as **Adrian RoseBrock** is awesome at breaking down the concepts and anything I say will basically be quoting or summarizing what he has already said there.<br>
+<br>
 
 ### TESTING ###
 
