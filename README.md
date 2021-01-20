@@ -84,6 +84,10 @@ The basis for the code is two different opencv tutorials by **Adrian RoseBrock**
 - Yolov3 Object Detection with OpenCV: https://www.pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/
 - OpenCV Text Detection: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
 <br>
+There was also significant coding assistance found via Google which mostly resulted in Stack Overflow threads and posts having the most useful answers on technical issues that occured with the code.
+<br>
+With that acknowledgement let's walk through how this works from the aspect of the entry code containing the calls to the utils/util.py package containing the lower level code.<br>
+
 
 ### TESTING ###
 
