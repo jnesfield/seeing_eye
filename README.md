@@ -86,10 +86,25 @@ The basis for the code is two different opencv tutorials by **Adrian RoseBrock**
 - OpenCV Text Detection: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
 <br>
 There was also significant coding assistance found via Google which mostly resulted in Stack Overflow threads and posts having the most useful answers on technical issues that occured with the code.
-<br>
-With that acknowledgement let's walk through how this works from the aspect of the entry code containing the calls to the utils/utils.py script containing the lower level code.<br>
-**Note:** the lower level code is covered her in a high level detail but for a more indepth understanding I invite you to reviewthe pyimagesearch links above as **Adrian RoseBrock** is awesome at breaking down the concepts and anything I say will basically be quoting or summarizing what he has already said there.<br>
-<br>
+<br> 
+With that acknowledgement let's walk through how this works from the aspect of the entry code containing the calls to the utils/utils.py script containing the lower level code.<br> 
+**Note:** the lower level code is covered her in a high level detail but for a more indepth understanding I invite you to reviewthe pyimagesearch links above as **Adrian RoseBrock** is awesome at breaking down the concepts and anything I say will basically be quoting or summarizing what he has already said there. <br>
+<br> 
+
+From a highlevel what occurs is that:
+- 1: Code loads the dependencies and the utils/utils.py(*utils form here on*) as a normal python import.
+- 2: Code sets the default audio out and volume, GPIO pins/signals, implements a keyboard interrupt protocol, and uses os calls to emit a tone when ready.
+- 3: Code enters infinite loop (which can be broken by interrupt).
+- 4: Code uses GPIO signal to determine when capture button is activated to run application workflow.
+- 5: When GPIO signal received code does the following:
+ * a:Image is captured from USB Camera via Open CV.
+ * b:Image is passed to Object Detection function which use Open CV and the pretained Yolov3 object detection model and results are rerturned to main.
+ * c:Image is passed to Text Detection function which uses Open CV, the pretrained EAST model, and Pytesseract.
+ * d:Results of Text Detecton are ordered by coordinates so they follow the order they appear in.
+ * e:Results are read to user via pyttsx3.
+ <br>
+ **Lets take a deeper dive and explain what is occuring here:**<br>
+ <br>
 
 ### TESTING ###
 
