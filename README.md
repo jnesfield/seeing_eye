@@ -73,8 +73,9 @@ Now we have a button to tell the device when to capture as well as a light that 
 
 This will NOT be helpful for sight impared individuals but will be helpful for our testing purposes.
 
-For those who are sight impaired I modified the code so as to emit an audible tone using the speaker test function in linux. This was implemented in the working field test prototype I made for my mother that I recently gave her.
-
+For those who are sight impaired I modified the code so as to emit an audible tone using the speaker test function in linux. This was implemented in the working field test prototype I made for my mother that I recently gave her.<br>
+I will **NOT** becovering the deisgn and assembly of the field prototype as that is not in scope for purposes of this documentation.<br>
+<br>
 ### HOW THE CODE WORKS ###
 I cheated here a bit on the machine learning aspect of this as I am a big proponent of transfer learning and using pretrained models as most models are trainined on large clusters of compute resources on millions of samples which is typically unreaslistic to acheive without significant time and resources.<br>
 *However:* This is not really cheating; in an enterprise or production environment the time to value problem is real as most organizations are not willing to spend limited resources on purely experimental research without aim or a defined exit point in which a product is available to the customers, be it internal or external. There is also a high risk of failure which must be recognized. This is why cloud providers are so successful in creating software as a service in the form of cognitive or AI tools like ocr, text to speech, or the likes as they can be used quickly by the consumer by making a simplified api call.<br>
