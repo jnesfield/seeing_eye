@@ -92,16 +92,16 @@ With that acknowledgement let's walk through how this works from the aspect of t
 <br> 
 
 From a highlevel what occurs is that:<br>
-1: Code loads the dependencies and the utils/utils.py(*utils form here on*) as a normal python import. <br>
-2: Code sets the default audio out and volume, GPIO pins/signals, implements a keyboard interrupt protocol, and uses os calls to emit a tone when ready. <br>
-3: Code enters infinite loop (which can be broken by interrupt). <br>
-4: Code uses GPIO signal to determine when capture button is activated to run application workflow. <br>
-5: When GPIO signal received code does the following: <br>
-* a: Image is captured from USB Camera via Open CV. 
-* b: Image is passed to Object Detection function which use Open CV and the pretained Yolov3 object detection model and results are rerturned to main. 
-* c: Image is passed to Text Detection function which uses Open CV, the pretrained EAST model, and Pytesseract. 
-* d: Results of Text Detecton are ordered by coordinates so they follow the order they appear in. 
-* e: Results are read to user via pyttsx3. 
+- 1: Code loads the dependencies and the utils/utils.py(*utils form here on*) as a normal python import. <br>
+- 2: Code sets the default audio out and volume, GPIO pins/signals, implements a keyboard interrupt protocol, and uses os calls to emit a tone when ready. <br>
+- 3: Code enters infinite loop (which can be broken by interrupt). <br>
+- 4: Code uses GPIO signal to determine when capture button is activated to run application workflow. <br>
+- 5: When GPIO signal received code does the following: <br>
+ * a: Image is captured from USB Camera via Open CV. 
+ * b: Image is passed to Object Detection function which use Open CV and the pretained Yolov3 object detection model and results are rerturned to main. 
+ * c: Image is passed to Text Detection function which uses Open CV, the pretrained EAST model, and Pytesseract. 
+ * d: Results of Text Detecton are ordered by coordinates so they follow the order they appear in. 
+ * e: Results are read to user via pyttsx3. 
  <br>
  **Lets take a deeper dive and explain what is occuring here:**<br>
  <br>
