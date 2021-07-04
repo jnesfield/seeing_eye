@@ -5,38 +5,41 @@ from utils import utils
 import signal
 import os
 
+
+
 #os.system(r"pulseaudio --start")
 os.system(r"pactl set-default-sink 'alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo'")
-os.system(r"pactl set-sink-volume 0 90%")
+os.system(r"pactl set-sink-volume 0 90")
 
 #sets pins to use native numbers
 GPIO.setmode(GPIO.BOARD)
-inpin = 15
-outpin = 23
-GPIO.setup(inpin,GPIO.IN)
-GPIO.setup(outpin,GPIO.OUT)
+inpin1 = 15
+inpin2 = 29
+GPIO.setup(inpin1,GPIO.IN)
+GPIO.setup(inpin2,GPIO.IN)
 
 def keyboardInterruptHandler(signal, frame):
     print("KeyboardInterrupt (ID: {}) has been caught. Cleaning up...".format(signal))
-    GPIO.output(outpin,0)
     exit(0)
 
 signal.signal(signal.SIGINT, keyboardInterruptHandler)
 
+#say ready when device is ready
+os.system(r'speaker-test -c2 -t sine')
+
+
 #start Infinite loop to look for gpio header button to capture image, obj detect, east(text detect) and ocr(tesseract):
 while True:
-    x = GPIO.input(inpin)
-    #light up led when ready
-    GPIO.output(outpin,1)
+    x = GPIO.input(inpin1)
+    y = GPIO.input(inpin2)
+    
+    
     k = cv2.waitKey(1) & 0xFF
     # press 'q' to exit (if running diagnostics)
     if k == ord('q'):
-        GPIO.output(outpin,0)
         break
     if x == 0:
-        #turn off led when working
-        GPIO.output(outpin,0)
-       
+               
         #capture image
         image = utils.imageCap()
         print("img captured")
@@ -57,3 +60,6 @@ while True:
         #read results
         utils.readResults(objname, textstring)
         print("process complete")
+        
+    if y == 0:
+        #turns off machine if other button pressed, not working at this time, need to research
