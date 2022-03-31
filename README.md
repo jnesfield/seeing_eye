@@ -110,9 +110,10 @@ From a highlevel what occurs is that:<br>
 
 Testing is quite simple once the gpio pin are set up as above and the code is downloaded and ran.<br>
 If the object is in the yolov3 data used to train the model used here it will be detected.<br>
-Next if there is text in the object
+Next if there is text in the object it will be read using the tesseract ocr engine.<br>
+Finally a text to voice tool will read the text where the audio signal will be output to a 1/8 inch stereo jack so that any standard set of headphones can be used.
 
-
+Currently this is in live testing with my mother and further updates are expected!
 
 
 **MORE TO COME**
